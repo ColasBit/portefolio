@@ -317,9 +317,9 @@ body {
   color: #f2c94c;
 }
 
-/* --- STYLE TIMELINE (DIPLÔMES) --- */
+
 .formation-container {
-  border-left: 3px solid #f2c94c; /* La ligne verticale dorée */
+  border-left: 3px solid #f2c94c;
   margin-left: 20px;
   padding-left: 40px;
   position: relative;
@@ -327,21 +327,21 @@ body {
 
 .formation-item {
   position: relative;
-  margin-bottom: 50px; /* Espace entre les diplômes */
+  margin-bottom: 50px;
 }
 
-/* Le point doré sur la ligne */
+
 .formation-item::before {
   content: '';
   position: absolute;
-  left: -49px; /* Ajustement précis pour centrer sur la ligne */
+  left: -49px; 
   top: 5px;
   width: 16px;
   height: 16px;
   background: #f2c94c;
   border-radius: 50%;
-  border: 3px solid #2d2d2d; /* Petit contour pour détacher le point */
-  box-shadow: 0 0 10px rgba(242, 201, 76, 0.6); /* Effet lumineux */
+  border: 3px solid #2d2d2d; 
+  box-shadow: 0 0 10px rgba(242, 201, 76, 0.6); 
 }
 
 .formation-date {
@@ -417,16 +417,15 @@ body {
   filter: drop-shadow(0 0 5px rgba(242, 201, 76, 0.5));
 }
 
-/* --- SECTION CONTACT --- */
 
 .contact-container {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap; /* Pour le mobile */
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
-/* Colonne GAUCHE (Infos) */
+
 .contact-info {
   flex: 1;
   min-width: 300px;
@@ -449,7 +448,7 @@ body {
   gap: 15px;
 }
 
-/* Cartes de contact (Email, LinkedIn...) */
+
 .contact-card {
   display: flex;
   align-items: center;
@@ -459,7 +458,6 @@ body {
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.3s, background 0.3s;
   border-left: 3px solid transparent;
 }
 
@@ -470,13 +468,13 @@ body {
 
 .contact-card:hover {
   background: #444;
-  transform: translateX(10px); /* Petit décalage vers la droite */
+  transform: translateX(10px); 
   border-left-color: #f2c94c;
 }
 
-/* Colonne DROITE (Formulaire) */
+
 .contact-form {
-  flex: 1.5; /* Prend un peu plus de place que les infos */
+  flex: 1.5; 
   min-width: 300px;
   background: #252525;
   padding: 30px;
@@ -496,7 +494,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Style des champs input et textarea */
+
 .contact-form input, 
 .contact-form textarea {
   width: 100%;
@@ -507,11 +505,11 @@ body {
   color: #fff;
   font-family: inherit;
   font-size: 1rem;
-  box-sizing: border-box; /* Important pour ne pas dépasser */
+  box-sizing: border-box; 
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Quand on clique dans le champ */
+
 .contact-form input:focus, 
 .contact-form textarea:focus {
   outline: none;
@@ -519,7 +517,7 @@ body {
   box-shadow: 0 0 8px rgba(242, 201, 76, 0.3);
 }
 
-/* Bouton Envoyer */
+
 .btn-submit {
   width: 100%;
   padding: 15px;
@@ -538,9 +536,169 @@ body {
   transform: scale(1.02);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .contact-container {
-    flex-direction: column; /* Empiler infos et form */
+    flex-direction: column; 
+  }
+}
+
+
+.apropos-section {
+  padding-bottom: 40px;
+}
+
+.apropos-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+
+.bio-content {
+  flex: 1.2; 
+  min-width: 300px;
+}
+
+.bio-content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.text-gold {
+  color: #f2c94c;
+}
+
+.bio-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 25px;
+}
+
+
+.highlight-box {
+  background: rgba(242, 201, 76, 0.1); 
+  border-left: 4px solid #f2c94c;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 30px;
+}
+
+.highlight-box h4 {
+  color: #f2c94c;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+
+.interests-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.interest-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.interest-card:hover {
+  background: #3e3e3e;
+  transform: translateX(5px);
+}
+
+.interest-card .icon {
+  font-size: 2rem;
+  padding-top: 5px;
+}
+
+.interest-card h4 {
+  margin: 0 0 5px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.interest-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+
+.vision-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.vision-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at top right, rgba(242, 201, 76, 0.1), transparent 70%);
+}
+
+.vision-intro {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.vision-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.vision-list li {
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-radius: 8px;
+  border-bottom: 2px solid #f2c94c; 
+}
+
+.vision-list strong {
+  display: block;
+  color: #f2c94c;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.vision-list span {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  .apropos-container {
+    flex-direction: column;
   }
 }
