@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Hystory Escape - Escape Game</title>
+</head>
+
+<body class="scroll-container">
+
+    <header>
+        <blockquote>
+            <h1 id="Titre">
+                La Totif' Industries
+            </h1>
+        </blockquote>
+        <nav>
+            <div><a id="Accueil">Accueil</a>
+                <div class="sousmenu">
+                    <div class="scroll-page"><a id="partition" href="SAE.html#Activités">Notre Escape-Game</a></div>
+
+                    <div class="scroll-page"><a id="partition" href="SAE.html#Reservation">Reservations</a></div>
+
+                </div>
+            </div>
+            <div><a id="Contact">Contact</a>
+                <div class="sousmenu">
+                    <div class="scroll-page"><a id="partition" href="#map">Nous contacter ?</a></div>
+                    <div class="scroll-page"><a id="partition" href="#map">Nos collaborateurs</a></div>
+                </div>
+            </div>
+            <div><a id="Tarif" href="SAE.html#Tarifs">Tarifs</a></div>
+            <div><a id="Lieu" href="SAE.html#map">Où nous trouver ?</a></div>
+
+        </nav>
+
+    </header>
+    <main>
+
+        <a href="#" class ="scroll-page" id="retouraudebut"> &#8593 </a> <!--c'est la fleche-->
+
+        <article id="Avertissements">
+            <p>
+                La Totif' Industries, votre escape game n°1 à Sète.
+            </p>
+            <p>Les codes promo ne sont valables qu'en ligne et les offres de dernières minutes sont valables à partir de
+                4 joueurs enregistrés en ligne.</p>
+            <p>Une fois la réservation effectuée, vous recevrez un mail de confirmation, pensez à vérifier vos spams.
+            </p>
+            <p id="Activités">🕙 Merci de vous présenter 15 minutes avant. Tout retard entraînant une réduction du temps de jeu ⏳.</p>
+            <p>⛔️ les portes bébé et les animaux ne sont pas autorisés.</p>
+
+        </article>
+        
+        <article class="Contenu" > 
+            <div id="Imagepresentation">
+                <img src="Avion.png" alt="Image1">
+                <img src="avion2.png" alt="Image2">
+                <img src="Tour_de_controle.png" alt="Image3">
+            </div>
+            
+
+            <h1 >
+                Notre Escape-Game :
+            </h1>
+
+            <h4 id="Escapegameavion">
+                Avion Perdu : Feu vert pour le crash
+            </h4>
+            <p class="texte">
+            Un vol transportant une cargaison de plusieurs milliards de
+            dollars, perd tout contact avec la tour de contrôle. L'avion,
+            sans système de navigation ni communication, dérive à haute
+            altitude. Les pilotes et les opérateurs de crise doivent, via une
+            radio défaillante, coopérer pour analyser les données,
+            résoudre des énigmes critiques, et rétablir les systèmes
+            vitaux. Ils doivent rétablir les communications pour guider
+            l'avion vers un atterrissage d'urgence, tout en évitant des
+            désastreus. Le temps presse, aucune erreur n'est permise !
+            </p>
+
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>2-8 pers.</th>
+                        <th>60min</th>
+                        <th>Tarif en bas de page</th>
+
+                    </tr>
+                </thead>
+            </table>
+
+        </article>
+        </article>
+        <article id="Reservation" class="Contenu">
+            <h1>
+                Réservation
+            </h1>
+            <form action="Reservation.php" method="post">
+                <fieldset>
+                    
+
+                    <label id="surname" for="surname">Nom :</label>
+                    <input id="surname" name="uname" tyep="text" placeholder="ex: Dupont" required>
+                    <label id="uname" for="uname">Prénom :</label>
+                    <input id="uname" name="uname" type="text" placeholder="ex: Michel">
+                    <label id="email" for="email">Mail :</label>
+                    <input id="email2" type="email" placeholder="exemple@domaine.fr" required>
+                    <label> Nombre de Personne :</label>
+                    <input type="radio" name="nbrpersonne" value="2"><label>2</label>
+                    <input type="radio" name="nbrpersonne" value="3"><label>3</label>
+                    <input type="radio" name="nbrpersonne" value="4"><label>4</label>
+                    <input type="radio" name="nbrpersonne" value="5"><label>5</label>
+                    <input type="radio" name="nbrpersonne" value="6"><label>6</label>
+                    <input type="radio" name="nbrpersonne" value="7"><label>7</label>
+                    <input type="radio" name="nbrpersonne" value="8"><label>8</label>
+                <div>
+                    <input type="checkbox" required><label>Le paiment se fait dès l'envoie de la reservation!</label>
+                </div>
+                    <label for="escapegame-select"></label>
+                        <select name="Escape-Game" id="escapegame-select">
+                            <option value="">--Choisissez un Escape-Game--</option>
+                            <option value="Avion Perdu">Avion Perdu</option>
+                            <option value="Autre">Arrive bientôt...</option>
+                        </select>
+                </fieldset>
+                <input id="adroite" type="submit" value="Je réserve maintenant !">
+            </form>
+        </article>
+        <article class="Contenu">
+            <div>
+                <h1 id="Tarifs">
+                    Nos Tarifs
+                </h1>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Catégories
+                            </th>
+                            <th>
+                                2 joueurs
+                            </th>
+                            <th>
+                                3 à 8 personnes
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr1">
+                            <td>Mineurs (+16)</td>
+                            <td>25€/pers.</td>
+                            <td>20€/pers.</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Etudiants</td>
+                            <td>27€/pers.</td>
+                            <td>23€/pers.</td>
+
+                        </tr>
+                        <tr class="tr1">
+                            <td>Majeur</td>
+                            <td>45€/pers.</td>
+                            <td>30€/pers.</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="map" class="map-container">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d1012.1294093804098!2d3.696730656846171!3d43.4096269696234!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1359967453de1%3A0x1102e717ce02aa5d!2s3%20Rue%20Raspail%2C%2034200%20S%C3%A8te!5e1!3m2!1sfr!2sfr!4v1729274183018!5m2!1sfr!2sfr" 
+                    width="196%" height="180%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+        </article>
+        
+    </main>
+
+    <footer>
+        <p>Tous droit réservés aux créateurs: Nicolas Zago, Timothée CLAVEL, Keikahanui ELLER--BENAOUN, Ewan BAUDELOT</p>
+    </footer>
+
+</body>
+
+</html>

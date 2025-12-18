@@ -1,0 +1,362 @@
+body{
+    background-image: -webkit-image-set("avion_en_feu.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: #F1F1F1;
+}
+
+header{
+    width: 140%;
+    background-color: #1E3A5F;
+    box-shadow: 16px 16px 16px rgba(63, 0, 66, 0.352);
+    border-radius: 0px;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.Contenu{
+    background-color: #6a6a6a;
+    box-shadow: 16px 16px 16px rgba(23, 1, 24, 0.444);
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+h1{
+    margin-inline-start: -10px;
+}
+
+h2{
+    margin-inline-start: -10px;
+}
+
+h4{
+    margin-inline-start: -10px;
+}
+
+#Reservation.Contenu{
+    background-color: #a9a9a9;
+    margin-bottom: 60px;
+}
+
+header>blockquote{
+    display: block;
+    width: 20%;
+    padding: 0px;
+    flex-direction: row;
+    margin: 10px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    height: 90px;
+    padding : 5px;
+    width: auto;
+    background-color: rgba(0, 85, 127, 0.844);
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.352);
+    background-repeat: no-repeat;
+}
+
+nav>div{
+    display: block;
+    position:relative;
+    align-items: stretch;
+    margin-left: 50px;
+    top: 20px;
+    
+    
+}
+
+nav>div>a{
+    border-style: double;
+    padding: 10px 15px;
+    font-size: 16px;
+    
+    
+    
+}
+
+.sousmenu{
+    display: none;
+    background-color: rgba(0, 85, 127, 0.844);
+    position: absolute;
+    top:145%;
+    left: 0%;
+    width: 130px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 50);
+    
+}
+
+.sousmenu div {
+    padding: 0px 0;
+}
+
+.sousmenu div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav>div:hover .sousmenu{
+    display: block;
+}
+
+a:hover{
+    color: rgb(255, 194, 26);
+}
+
+#Accueil{
+    font-size: 150%;
+    color: #F1F1F1;
+}
+
+#Contact{
+    font-size: 150%;
+    color: #F1F1F1;
+}
+
+#Tarif{
+    font-size: 150%;
+    display: flex;
+    color: #F1F1F1;
+}
+
+#Lieu{
+    font-size: 150%;
+    color: #F1F1F1;
+}
+
+#Avertissements{
+    background-color: #a9a9a9;
+    box-shadow: 16px 16px 16px #4b4e51;
+    width: 800px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+main>article>p{
+    display: block;
+    font-style: italic;
+    text-align: center;
+    text-decoration:underline;
+    
+}
+
+#Titre{
+    text-decoration: overline;
+    text-decoration-color: #a29292;
+    color: #F1F1F1;
+    font-style: italic;
+    text-align: center;
+}
+
+main>div{
+    background-color: white;
+    border-radius: 40%;
+    justify-content: center;
+}
+
+#retouraudebut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 50px; 
+    font-size: 24px;
+    border-radius: 10px; 
+    transition: all 0.4s ease; /* Transition pour les effets */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.scroll-container{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.scroll-page{
+    scroll-behavior: smooth;
+}
+
+#retouraudebut:hover {
+    width: 70px;
+    height: 70px;
+    line-height: 70px; 
+    border-radius: 50%; 
+    background-color: #2980b9; 
+}
+
+
+#retouraudebut {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+tr{
+    background-color: #F0F0F0;
+    display: table-row;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+.tr1 {
+    background-color:#bebebe;
+}
+
+td{
+    padding:0px 5px ;
+    color:#1E3A5F;
+}
+
+th{
+    background-color: #385b7d;
+}
+
+tbody{
+    background-color: violet;
+}
+
+thead{
+        color : rgb(0, 0, 0);
+}
+
+table{
+    text-align: center;
+    display: block;
+    width: 30%;
+    margin-inline-start: -10px;
+}
+
+
+fieldset{
+    display: block;
+    text-align: center;
+}
+
+fieldset #escapegame-select{
+    display: flex;
+    margin-left: 65%;
+    position: relative;
+    left: 0px;
+    top: -140px;
+}
+
+fieldset #email{
+    display: flex;
+    margin-left: 63%;
+    position: relative;
+    left: 0px;
+    top: -30px;
+}
+
+fieldset #email2{
+    display: flex;
+    margin-left: 70%;
+    position: relative;
+    left: 0px;
+    top: -50px;
+}
+
+fieldset #surname{
+    display: flex;
+    margin-right: 70%;
+    
+}
+
+fieldset #uname{
+    display: flex;
+    margin-right: 70%;
+    
+}
+
+#Imagepresentation{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.4s ease;
+    position:relative;
+    bottom:10px;
+    margin-inline-start: -20px;
+    z-index: 1;
+}
+
+#Imagepresentation img{
+    width: 35%;
+    transition: all 0.4s ease;
+}
+
+#Imagepresentation:hover{
+    width: 100%;
+    border-radius: 1%;
+    position: relative;
+    bottom: 27px;
+}
+
+#article1{
+    display: flex;
+}
+
+#Activité{
+    display: block;
+}
+
+#partition{
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+#partition:hover{
+    font-size: 107%;
+}
+
+main>article>div{
+    display: flex;
+    
+}
+
+.map-container{
+    position: relative;
+    bottom: 96px;
+}
+
+iframe{
+    position: relative;
+    left: 1em;
+}
+
+.texte{
+    font-style: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+footer{
+    margin: auto;
+    width: 100vh;
+    display: block;
+    bottom: 0;
+    padding-bottom: 0em;
+    background-color: #1E3A5F;
+    box-shadow: 16px 16px 16px rgba(63, 0, 66, 0.352);
+    color:#F1F1F1;
+    text-align: center;
+    border-radius: 20px;
+    
+}
