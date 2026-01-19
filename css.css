@@ -193,6 +193,23 @@ body {
   border-radius: 0; 
 }
 
+.projet-video-container {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 85%;
+  margin: 0;
+  z-index: 0;  
+}
+
+.responsive-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
 
 .projet:hover .projet-img-container img {
   transform: scale(1.05); 

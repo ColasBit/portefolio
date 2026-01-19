@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css.css">
   <title>Portfolio</title>
-  <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
 </head>
@@ -215,14 +214,11 @@
         
           
       <section class="projet projet-labo">
-        <div class="projet-img-container">
-          <div id="jeu-container" style="width: 800; height: 600px; overflow: hidden;"></div>
-          <script>
-            cheerpjInit({ disableRangeRequests: true }).then(() => {
-                cheerpjCreateDisplay(800, 600, document.getElementById("jeu-container"));
-                cheerpjRunMain("Main", "/app/portefolio/testIAGenerations.jar");
-            });
-          </script>
+        <div class="projet-video-container">
+          <video autoplay muted loop  class="responsive-video">
+              <source src="images/Vidéo sans titre ‐ Réalisée avec Clipchamp.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
         </div>
         <div class="projet-info">
           <h3>Réseau de Neurones</h3>
@@ -233,7 +229,7 @@
              <br>• <strong>Réseau de Neurones :</strong> Codage manuel des perceptrons, couches cachées et fonctions d'activation (tanh).
              <br>• <strong>Sélection Naturelle :</strong> Implémentation d'un algorithme génétique (mutation, croisement) pour faire évoluer les générations.
           </p>
-          <p><strong>Bilan :</strong> Une démonstration visuelle de la puissance du Deep Learning : passage de créatures aléatoires à des survivants experts en 300 générations.</p>
+          <p><strong>Bilan :</strong> Une démonstration visuelle du Deep Learning : passage de créatures aléatoires à des survivants en 300 générations.</p>
         </div>
       </section>
 
