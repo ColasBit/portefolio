@@ -218,7 +218,7 @@
         <div class="projet-img-container">
           <div id="jeu-container" style="width: 800; height: 600px; overflow: hidden;"></div>
           <script>
-            cheerpjInit().then(() => {
+            cheerpjInit({ disableRangeRequests: true }).then(() => {
                 cheerpjCreateDisplay(800, 600, document.getElementById("jeu-container"));
                 cheerpjRunMain("Main", "/app/portefolio/testIAGenerations.jar");
             });
