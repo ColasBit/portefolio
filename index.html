@@ -214,13 +214,13 @@
 
       <section class="projet projet-labo">
         <div class="projet-img-container">
-          <div id="jeu-container" style="width: 1500px; height: 900px; background: #000;"></div>
-            <script>
-              cheerpjInit().then(() => {
-                  cheerpjCreateDisplay(1500, 900, document.getElementById("jeu-container"));
-                  cheerpjRunJar("/app/portefolio/testIAGenerations.jar");
-              });
-            </script>
+          <div id="jeu-container" style="width: 100%; height: 900px; overflow: hidden;"></div>
+          <script>
+            cheerpjInit().then(() => {
+                cheerpjCreateDisplay(1500, 900, document.getElementById("jeu-container"));
+                cheerpjRunJar("/app/portefolio/testIAGenerations.jar");
+            });
+          </script>
         </div>
         
         <div class="projet-info">
