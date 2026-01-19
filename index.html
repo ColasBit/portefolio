@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css.css">
   <title>Portfolio</title>
+  <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
 </head>
@@ -208,6 +209,30 @@
              <br>• <strong>Applications Natives :</strong> Recodage complet d'outils fonctionnels (Bloc-notes, Explorateur de fichiers, Terminal,...).
           </p>
           <p><strong>Bilan :</strong> Une plongée profonde dans la programmation événementielle et la structure des systèmes graphiques.</p>
+        </div>
+      </section>
+
+      <section class="projet projet-labo">
+        <div class="projet-img-container">
+          <div id="jeu-container" style="width: 800px; height: 600px; background: #000;"></div>
+            <script>
+              cheerpjInit().then(() => {
+                  cheerpjCreateDisplay(800, 600, document.getElementById("jeu-container"));
+                  cheerpjRunJar("LiensExternes/testIAGenerations.jar");
+              });
+            </script>
+        </div>
+        
+        <div class="projet-info">
+          <h3>Réseau de Neurones</h3>
+          <p><strong>Technos :</strong> Java </p>
+          <p><strong>Contexte :</strong> Création d'une Intelligence Artificielle capable d'apprendre à survivre seule dans un environnement sans aucune règle pré-codée</p>
+          <p><strong>Ce que j’ai fait :</strong> 
+             Développement d'un moteur d'apprentissage par renforcement "from scratch" :
+             <br>• <strong>Réseau de Neurones :</strong> Codage manuel des perceptrons, couches cachées et fonctions d'activation (tanh).
+             <br>• <strong>Sélection Naturelle :</strong> Implémentation d'un algorithme génétique (mutation, croisement) pour faire évoluer les générations.
+          </p>
+          <p><strong>Bilan :</strong> Une démonstration visuelle de la puissance du Deep Learning : passage de créatures aléatoires à des survivants experts en 300 générations.</p>
         </div>
       </section>
 
