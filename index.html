@@ -211,19 +211,18 @@
           <p><strong>Bilan :</strong> Une plongée profonde dans la programmation événementielle et la structure des systèmes graphiques.</p>
         </div>
       </section>
-      
-        <div id="jeu-container" style="width: 100%; height: 900px; overflow: hidden;"></div>
-          <script>
-            cheerpjInit().then(() => {
-                cheerpjCreateDisplay(1500, 900, document.getElementById("jeu-container"));
-                cheerpjRunJar("/app/portefolio/testIAGenerations.jar");
-            });
-          </script>
+
+        
           
       <section class="projet projet-labo">
         <div class="projet-img-container">
-          
-        
+          <div id="jeu-container" style="width: 800; height: 600px; overflow: hidden;"></div>
+          <script>
+            cheerpjInit().then(() => {
+                cheerpjCreateDisplay(800, 600, document.getElementById("jeu-container"));
+                cheerpjRunJar("/app/portefolio/testIAGenerations.jar");
+            });
+          </script>
         </div>
         <div class="projet-info">
           <h3>Réseau de Neurones</h3>
