@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Invaders - Portfolio Game</title>
+    <style>
+        /* --- STYLE CYBERPUNK --- */
+        :root {
+            --bg-color: #050505;
+            --primary: #f2c94c; /* Jaune Or */
+            --player: #00f3ff;  /* Cyan */
+            --enemy: #ff004c;   /* Rouge */
+            --bullet: #fff;     /* Blanc */
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #game-container {
+            position: relative;
+            box-shadow: 0 0 30px rgba(242, 201, 76, 0.15);
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+
+        canvas {
+            display: block;
+            background: radial-gradient(circle at bottom, #1a1a1a 0%, #000 100%);
+            border-radius: 6px;
+        }
+
+        /* Interface (UI) */
+        #ui-layer {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #score-display {
+            position: absolute;
+            top: 15px; left: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-shadow: 0 0 5px rgba(242, 201, 76, 0.5);
+        }
+
+        /* Menus */
+        .screen {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            text-align: center;
+            pointer-events: auto;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h1 { margin: 0 0 10px 0; color: var(--player); text-transform: uppercase; text-shadow: 0 0 10px var(--player); }
+        p { color: #ccc; margin-bottom: 20px; font-size: 0.9rem; }
+        
+        button {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+        button:hover {
+            background: #fff;
+            box-shadow: 0 0 15px var(--primary);
+            transform: scale(1.05);
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="450" height="650"></canvas>
+        
+        <div id="ui-layer">
+            <div id="score-display">SCORE: 0</div>
+
+            <div id="start-screen" class="screen">
+                <h1>NEON SHOOTER</h1>
+                <p>Déplacement : <strong>⬅️ FLÈCHES ➡️</strong><br>Tir : <strong>ESPACE</strong></p>
+                <button onclick="startGame()">DÉCOLLAGE</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1 style="color: var(--enemy)">MISSION ÉCHOUÉE</h1>
+                <p>Score Final : <strong id="final-score" style="color: var(--primary)">0</strong></p>
+                <button onclick="startGame()">RÉESSAYER</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('score-display');
+        const startScreen = document.getElementById('start-screen');
+        const gameOverScreen = document.getElementById('game-over-screen');
+        const finalScoreEl = document.getElementById('final-score');
+
+        // --- VARIABLES JEU ---
+        let gameRunning = false;
+        let score = 0;
+        let frames = 0;
+        let gameSpeed = 2; // Vitesse de descente des ennemis
+
+        // --- ENTITÉS ---
+        const player = {
+            x: canvas.width / 2 - 20,
+            y: canvas.height - 60,
+            w: 40,
+            h: 40,
+            speed: 5,
+            color: '#00f3ff',
+            dx: 0
+        };
+
+        let bullets = [];
+        let enemies = [];
+        let particles = []; // Pour les explosions
+
+        // --- CONTRÔLES ---
+        const keys = { ArrowLeft: false, ArrowRight: false, Space: false };
+
+        document.addEventListener('keydown', (e) => {
+            if(e.code === 'ArrowLeft') keys.ArrowLeft = true;
+            if(e.code === 'ArrowRight') keys.ArrowRight = true;
+            if(e.code === 'Space' && !keys.Space) { // Tir unique par pression
+                if(gameRunning) shoot();
+                keys.Space = true;
+            }
+            
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if(e.code === 'ArrowLeft') keys.ArrowLeft = false;
+            if(e.code === 'ArrowRight') keys.ArrowRight = false;
+            if(e.code === 'Space') keys.Space = false;
+        });
+
+        // --- FONCTIONS ---
+
+        function startGame() {
+            // Reset
+            gameRunning = true;
+            score = 0;
+            frames = 0;
+            gameSpeed = 2;
+            bullets = [];
+            enemies = [];
+            particles = [];
+            player.x = canvas.width / 2 - 20;
+
+            // UI
+            scoreEl.innerText = "SCORE: 0";
+            startScreen.classList.add('hidden');
+            gameOverScreen.classList.add('hidden');
+
+            loop();
+        }
+
+        function shoot() {
+            bullets.push({
+                x: player.x + player.w / 2 - 2, // Centrer le tir
+                y: player.y,
+                w: 4,
+                h: 15,
+                color: '#f2c94c',
+                speed: 10
+            });
+        }
+
+        function spawnEnemy() {
+            // Spawn toutes les 60 frames (environ 1 seconde)
+            // Réduit le temps de spawn avec le score
+            let spawnRate = 60 - Math.floor(score / 50); 
+            if (spawnRate < 20) spawnRate = 20; // Cap limit
+
+            if (frames % spawnRate === 0) {
+                const size = 30;
+                const x = Math.random() * (canvas.width - size);
+                enemies.push({
+                    x: x,
+                    y: -size,
+                    w: size,
+                    h: size,
+                    color: '#ff004c',
+                    speed: Math.random() * 1.5 + 1 + (score/200) // Vitesse variable
+                });
+            }
+        }
+
+        function createExplosion(x, y, color) {
+            // Créer 10 particules
+            for (let i = 0; i < 12; i++) {
+                particles.push({
+                    x: x,
+                    y: y,
+                    size: Math.random() * 4 + 2,
+                    speedX: (Math.random() - 0.5) * 6,
+                    speedY: (Math.random() - 0.5) * 6,
+                    color: color,
+                    life: 1.0 // Opacité
+                });
+            }
+        }
+
+        // --- BOUCLE PRINCIPALE ---
+        function loop() {
+            if (!gameRunning) return;
+            
+            // 1. Nettoyer le canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 2. Joueur
+            if (keys.ArrowLeft && player.x > 0) player.x -= player.speed;
+            if (keys.ArrowRight && player.x + player.w < canvas.width) player.x += player.speed;
+
+            // Dessin Joueur (Forme vaisseau simple)
+            ctx.fillStyle = player.color;
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = player.color;
+            ctx.beginPath();
+            ctx.moveTo(player.x + player.w/2, player.y); // Pointe
+            ctx.lineTo(player.x + player.w, player.y + player.h); // Droite
+            ctx.lineTo(player.x + player.w/2, player.y + player.h - 10); // Cul
+            ctx.lineTo(player.x, player.y + player.h); // Gauche
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // 3. Balles
+            bullets.forEach((b, index) => {
+                b.y -= b.speed;
+                ctx.fillStyle = b.color;
+                ctx.fillRect(b.x, b.y, b.w, b.h);
+
+                // Suppression hors écran
+                if (b.y + b.h < 0) bullets.splice(index, 1);
+            });
+
+            // 4. Ennemis
+            enemies.forEach((e, eIndex) => {
+                e.y += e.speed;
+                
+                // Dessin Ennemi (Carré avec des yeux)
+                ctx.fillStyle = e.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = e.color;
+                ctx.fillRect(e.x, e.y, e.w, e.h);
+                // Yeux
+                ctx.fillStyle = '#000'; 
+                ctx.fillRect(e.x + 5, e.y + 10, 5, 5);
+                ctx.fillRect(e.x + e.w - 10, e.y + 10, 5, 5);
+                ctx.shadowBlur = 0;
+
+                // Collision avec Joueur
+                if (
+                    player.x < e.x + e.w &&
+                    player.x + player.w > e.x &&
+                    player.y < e.y + e.h &&
+                    player.y + player.h > e.y
+                ) {
+                    gameOver();
+                }
+
+                // Collision avec Balles
+                bullets.forEach((b, bIndex) => {
+                    if (
+                        b.x < e.x + e.w &&
+                        b.x + b.w > e.x &&
+                        b.y < e.y + e.h &&
+                        b.y + b.h > e.y
+                    ) {
+                        // Boum !
+                        createExplosion(e.x + e.w/2, e.y + e.h/2, e.color);
+                        enemies.splice(eIndex, 1);
+                        bullets.splice(bIndex, 1);
+                        score += 10;
+                        scoreEl.innerText = "SCORE: " + score;
+                    }
+                });
+
+                // Ennemi passé (Game Over ou Perte de points ? Ici Game Over si touche le bas)
+                if (e.y > canvas.height) {
+                    enemies.splice(eIndex, 1);
+                    // Optionnel : Perdre des points ou Game Over
+                    // gameOver(); 
+                }
+            });
+
+            // 5. Particules (Explosions)
+            particles.forEach((p, index) => {
+                p.x += p.speedX;
+                p.y += p.speedY;
+                p.life -= 0.05; // Fade out
+
+                ctx.globalAlpha = p.life;
+                ctx.fillStyle = p.color;
+                ctx.fillRect(p.x, p.y, p.size, p.size);
+                ctx.globalAlpha = 1.0;
+
+                if (p.life <= 0) particles.splice(index, 1);
+            });
+
+            spawnEnemy();
+            frames++;
+            requestAnimationFrame(loop);
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            finalScoreEl.innerText = score;
+            gameOverScreen.classList.remove('hidden');
+            
+            // Dernière explosion sur le joueur
+            createExplosion(player.x + player.w/2, player.y + player.h/2, player.color);
+            // On dessine l'explosion une dernière fois pour l'effet
+            particles.forEach(p => {
+                ctx.fillStyle = p.color;
+                ctx.fillRect(p.x, p.y, p.size, p.size);
+            });
+        }
+
+    </script>
+</body>
+</html>
