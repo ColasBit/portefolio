@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div>
+        <h2>Nicolas ZAGO</h2>
+    </div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <div class="dropdown-container">
+            <a id="Projets" href="#">Projets ▼</a>
+            <div class="sousmenu">
+                <div class="scroll-page">
+                    <a class="partition" href="projetsUniversitaires.html">Projets Universitaires</a>
+                </div>
+                <div class="scroll-page">
+                    <a class="partition" href="projetsPersonnels.html">Projets Personnels</a>
+                </div>
+            </div>
+        </div>
+        
+        <a href="formation.html">Diplômes & Formations</a>
+        <a href="LiensExternes/CV Nicolas ZAGO.pdf">CV</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+  <main>
+<section id="contact">
+      <h2>Me Contacter</h2>
+      
+      <div class="contact-container">
+        
+        <div class="contact-info">
+          <h3>Discutons de vos projets</h3>
+          <p>Actuellement à la recherche d'une alternance ou d'opportunités de développement. N'hésitez pas à me contacter via le formulaire ou directement sur mes réseaux.</p>
+          
+          <div class="contact-links">
+            <a href="mailto:nicolas.zago@etu.umontpellier.fr" class="contact-card">
+              <div class="icon-box"><i class="devicon-google-plain"></i></div> <span>nicolas.zago@etu.umontpellier.fr</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nicolas-zago-6bb948389/" target="_blank" class="contact-card">
+              <div class="icon-box"><i class="devicon-linkedin-plain"></i></div>
+              <span>Mon Profil LinkedIn</span>
+            </a>
+
+            <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/zagon" target="_blank" class="contact-card">
+              <div class="icon-box"><i class="devicon-github-original"></i></div>
+              <span>Mon GitLab</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/nicolaszago08@gmail.com" method="POST">
+  
+          <input type="hidden" name="_captcha" value="false">
+          
+          <input type="hidden" name="_next" value="https://colasbit.github.io/portefolio/#contact">
+          
+          <input type="hidden" name="_subject" value="Nouveau contact depuis le Portfolio !">
+
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
+
+      </div>
+    </section>
+
+    </main>
+
+  <footer>
+    <p> 2025 - Portfolio créé par Nicolas Zago</p>
+  </footer>
+  <script src="scroll.js"></script>
+</body>
+</html>

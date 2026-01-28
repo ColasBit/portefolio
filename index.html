@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css.css">
   <title>Portfolio</title>
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -15,11 +17,22 @@
       <h2>Nicolas ZAGO</h2>
     </div>
     <nav>
-      <a href="#projets">Projets</a>
-      <a href="#diplomes">Diplômes & Formations</a>
-      <a href="#competences">Compétences</a>
-      <a href="LiensExternes/Nicolas ZAGO.pdf">CV</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Accueil</a>
+      <div class="dropdown-container">
+        <a id="Projets" href="#">Projets ▼</a>
+        <div class="sousmenu">
+          <div class="scroll-page">
+            <a class="partition" href="projetsUniversitaires.html">Projets Universitaires</a>
+          </div>
+          <div class="scroll-page">
+            <a class="partition" href="projetsPersonnels.html">Projets Personnels</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="formation.html">Diplômes & Formations</a>
+      <a href="LiensExternes/CV Nicolas ZAGO.pdf">CV</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -29,31 +42,60 @@
       <h2>À Propos de Moi</h2>
 
       <div class="apropos-container">
-        
-        <div class="bio-content">
-          <h3><span class="text-gold">Tech</span> & <span class="text-gold">Frissons</span></h3>
-          <p>
-            Je m'appelle <strong>Nicolas</strong>. Je suis un étudiant passionné par l'intersection entre la technologie rigoureuse et l'immersion narrative. 
-            Mon parcours en <strong>BUT Informatique</strong> m'a donné les bases techniques (code, architecture logicielle et réseaux), mais mon moteur, c'est l'envie de détourner ces outils pour créer des émotions.
-          </p>
-          
-          <div class="highlight-box">
-            <h4><i class="devicon-bash-plain"></i> Projet Phare : "Night Shift"</h4>
+
+        <div class="bio-content enhanced-bio">
+          <h3>
+            <span class="text-gold">Tech</span> & <span class="text-gold shiver-text">Frissons</span>
+          </h3>
+
+          <div class="bio-intro-block">
             <p>
-              Le reflet de ma dualité : une expérience horrifique immersive intégrant la conception de costumes d'animatroniques et l'automatisation de décors via des protocoles de communication série. Le projet mobilise des compétences en systèmes embarqués et en informatique industrielle pour synchroniser la narration, le guidage vocal des antagonistes et la gestion d'un réseau de surveillance multi-caméras.
-              <br><em>Objectif : Maîtriser l'imprévu et la technique atypique.</em>
+              Je m'appelle <span class="bio-highlight">Nicolas</span>. Je suis un étudiant passionné par l'intersection
+              entre la technologie rigoureuse et l'immersion narrative.
+            </p>
+            <p>
+              Mon parcours en <span class="bio-tech-tag">BUT Informatique</span> m'a donné les bases techniques (code,
+              architecture logicielle et réseaux), mais mon moteur, c'est l'envie de détourner ces outils pour créer des
+              émotions.
             </p>
           </div>
-        </div>
 
+          <div class="project-terminal-box">
+            <div class="terminal-header">
+              <div class="terminal-icon"><i class="devicon-bash-plain"></i></div>
+              <div class="terminal-title">DOSSIER PROJET : PROTOCOLE "NIGHT SHIFT"</div>
+              <div class="terminal-status blink">STATUS: ACTIF</div>
+            </div>
+
+            <div class="terminal-body">
+              <div class="scanline-overlay"></div>
+              <p class="terminal-boot-text">
+                > Initialisation du système narratif...<br>
+                > Connexion aux animatroniques : OK.<br>
+                > Chargement du module horrifique...
+              </p>
+              <p class="terminal-main-text">
+                Le reflet de ma dualité : une expérience immersive intégrant la conception de costumes et
+                l'automatisation de décors via des protocoles de communication série. Le projet mobilise systèmes
+                embarqués et informatique industrielle pour synchroniser le guidage vocal des antagonistes et la gestion
+                d'un réseau de surveillance multi-caméras.
+              </p>
+              <div class="terminal-alert">
+                ⚠️ OBJECTIF MISSION : Maîtriser l'imprévu et la technique atypique.
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Ce qui m'anime</h3>
         <div class="interests-column">
-          <h3>Ce qui m'anime</h3>
-          
+
+
           <div class="interest-card">
             <div class="icon">💾</div>
             <div class="text">
               <h4>Informatique Rétro</h4>
-              <p>Redonner vie aux systèmes des années 90 pour créer des contrastes technologiques saisissants... comme mon projet de simulateur d'OS en Python (voir plus bas)..</p>
+              <p>Redonner vie aux systèmes des années 90 pour créer des contrastes technologiques saisissants... comme
+                mon projet de simulateur d'OS en Python (voir plus bas)..</p>
             </div>
           </div>
 
@@ -77,301 +119,53 @@
 
       <div class="vision-container">
         <h3> Ma Vision : L'Ingénierie de l'Expérience</h3>
-        
-        <div class="vision-content">
-          <div class="vision-text">
-            <p class="vision-intro">
-              Mon ambition ? Devenir <strong>Ingénieur Expérientiel</strong>. Je ne vise pas l'informatique de bureau, mais les coulisses des parcs à thèmes et des Escape Games nouvelle génération.
-            </p>
-            <p>
-              À terme, je souhaite fonder une franchise de divertissement horrifique connectée par un "Lore" évolutif, en repoussant les limites de l'immersion via :
-            </p>
-          </div>
 
-          <ul class="vision-list">
-            <li>
-              <strong>L'IA Imprévisible</strong>
-              <span>Rendre les animatroniques vivants et réactifs.</span>
-            </li>
-            <li>
-              <strong>Le "Malaise Technologique"</strong>
-              <span>Utiliser le vintage comme outil de narration pure.</span>
-            </li>
-            <li>
-              <strong>Le Storytelling Transmédia</strong>
-              <span>L'expérience commence avant même d'entrer dans la salle.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <div class="vision-container">
+          <div class="vision-bg-grid"></div>
 
+          <h3 class="vision-title" data-text="Ma Vision : L'Ingénierie de l'Expérience">
+            Ma Vision : L'Ingénierie de l'Expérience
+          </h3>
 
-    <section id="projets">
-      <h2>Projets Universitaires</h2>
+          <div class="vision-content">
+            <div class="vision-text-block">
+              <p class="vision-intro">
+                Mon ambition ? Devenir <strong class="highlight-glitch">Ingénieur Expérientiel</strong>.
+                Je ne vise pas l'informatique de bureau, mais les coulisses des parcs à thèmes et des Escape Games
+                nouvelle génération.
+              </p>
+              <p>
+                À terme, je souhaite fonder une franchise de divertissement horrifique connectée par un "Lore" évolutif.
+              </p>
+            </div>
 
-      <section class="projet">
-        <div class="projet-img-container">
-            
-            <img src="images/SAESiteStatic.png" alt="Aperçu du site Escape Game">
-        </div>
-        
-        <div class="projet-info">
-          <h3>Développement d’un site statique — Escape Game</h3>
-          <a href="SAE_Site/Index.html">Voir le projet</a>
-          <p><strong>Technos :</strong> HTML, UX/UI</p>
-          <p><strong>Contexte :</strong> Réalisation d’un site statique pour promouvoir un escape game.</p>
-          <p><strong>Ce que j’ai fait :</strong> Création d’un site vitrine complet, réflexion autour de l’UX/UI, organisation visuelle, travail en équipe. Participation à la conception d’une identité visuelle cohérente pour un produit fictif.</p>
-          <p><strong>Bilan :</strong> Une première immersion concrète dans un projet informatique réel, confronté au travail d’équipe, à la communication et à la vision produit.</p>
-        </div>
-      </section>
+            <div class="vision-cards">
+              <div class="v-card">
+                <div class="v-card-icon">⚠️</div>
+                <h4>L'IA Imprévisible</h4>
+                <p>Rendre les costumes d'animatroniques vivants et réactifs grâce au Game Master.</p>
+                <div class="v-card-border"></div>
+              </div>
 
-      <section class="projet">
-        <div class="projet-img-container">
-             
-            <img src="images/IMG_1269-scaled.webp" alt="Interface du jeu 421">
-        </div>
+              <div class="v-card">
+                <div class="v-card-icon">📺</div>
+                <h4>Le "Malaise Technologique"</h4>
+                <p>Utiliser le vintage comme outil de narration pure.</p>
+                <div class="v-card-border"></div>
+              </div>
 
-        <div class="projet-info">
-          <h3>Jeu 421 — Projet Java</h3>
-          <p><strong>Technos :</strong> Java</p>
-          <p><strong>Contexte :</strong> Développement d’une version numérique du jeu de dés 421 dans le cadre d’un gros projet de fin de semestre.</p>
-          <p><strong>Ce que j’ai fait :</strong> Programmation complète du jeu, gestion des règles, interface console. Conception d’un <strong>système de réflexion artificielle</strong> basé sur des espérances mathématiques afin d’optimiser les choix de l’IA.</p>
-          <p><strong>Bilan :</strong> Un projet exigeant sous contrainte, très formateur sur la rigueur et les algorithmes.</p>
-        </div>
-      </section>
-
-      <section class="projet">
-        <div class="projet-img-container">
-
-            <img src="images/SAEPokemon.png" alt="Capture d'écran du Forum">
-        </div>
-
-        <div class="projet-info">
-          <h3>Jeu Pokemon TCG</h3>
-          <p><strong>Technos :</strong> Java, FXML</p>
-          <p><strong>Contexte :</strong> Réalisation d'un tournoi Joueur contre Joueur du jeu de carte Pokemon</p>
-          <p><strong>Ce que j’ai fait :</strong> Le Projet était divisé en 2 temps : Réalision des mécanique (avec UX donnée) puis réalistion de l'interface UX (avec mécanique données)</p>
-          <p><strong>Bilan :</strong> Projet particulièrement instructif quant à la mise en pratique du Developpement Objet</p>
-        </div>
-      </section>
-
-      <section class="projet">
-        <div class="projet-img-container">
-
-            <img src="images/image.png" alt="Capture d'écran du Forum">
-        </div>
-
-        <div class="projet-info">
-          <h3>Application Web Dynamique — Forum (PHP / SQL)</h3>
-          <p><strong>Technos :</strong> PHP, SQL, HTML, UX/UI</p>
-          <p><strong>Contexte :</strong> Création d’une application dynamique de type forum, menée selon une méthode itérative Agile.</p>
-          <p><strong>Ce que j’ai fait :</strong> Définition complète de la structure du site, création et modélisation de la base de données, élaboration des maquettes UI/UX, développement progressif avec sprint.</p>
-          <p><strong>Bilan :</strong> Projet dont je suis particulièrement fier : qualité du code, structure propre, vraie démarche professionnelle.</p>
-        </div>
-      </section>
-
-      
-
-    </section>
-
-    <section id="projets">
-      <h2>Projets Personnels</h2>
-
-      <section class="projet projet-labo">
-        <div class="projet-img-container">
-            
-            <img src="images/Windows95.png" alt="Projet VM Windows">
-        </div>
-        
-        <div class="projet-info">
-          <h3>Afficher une caméra Windows 11 sur une VM Windows 95</h3>
-          <p><strong >Technos :</strong> C, DosBox, WSL</p>
-          <p><strong>Contexte :</strong> Réalisation d'une VM DOSBox contenant Windows 95 étant relié à Windows 11 pour transmettre un flux vidéo</p>
-          <p><strong>Ce que j’ai fait :</strong> Le But était de faire comprendre à un dinosaure comment afficher une vidéo dans un langage compréhensible. J'ai donc codé un Serveur en C qui envoie des données retravaillées à un client sur un pont Réseau via Socket TCP.</p>
-          <p><strong>Bilan :</strong> Cela m'a fait comprendre les limites des OS, les outils et comment les systemes communiquent et évoluent</p>
-        </div>
-      </section>
-
-      <section class="projet projet-labo">
-        <div class="projet-img-container">
-            <img src="images/image_013205.png" alt="Interface OS Retro Python">
-        </div>
-        
-        <div class="projet-info">
-          <h3>Simulation d'OS & Environnement de Bureau</h3>
-          <p><strong>Technos :</strong> Python (POO), Bibliothèques graphiques natives</p>
-          <p><strong>Contexte :</strong> Défi technique personnel : recréer l'expérience utilisateur de Windows 95/98 entièrement en code moderne</p>
-          <p><strong>Ce que j’ai fait :</strong> 
-             Architecture complète d'un "Système d'Exploitation" simulé :
-             <br>• <strong>Système de Fichiers :</strong> Développement d'une couche d'abstraction pour naviguer sur la machine hôte via l'interface rétro.
-             <br>• <strong>Applications Natives :</strong> Recodage complet d'outils fonctionnels (Bloc-notes, Explorateur de fichiers, Terminal,...).
-          </p>
-          <p><strong>Bilan :</strong> Une plongée profonde dans la programmation événementielle et la structure des systèmes graphiques.</p>
-        </div>
-      </section>
-
-        
-          
-      <section class="projet projet-labo">
-        <div class="projet-video-container">
-          <video autoplay muted loop  class="responsive-video">
-              <source src="images/démo-ia-surivie.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-        </div>
-        <div class="projet-info">
-          <h3>Réseau de Neurones</h3>
-          <p><strong>Technos :</strong> Java </p>
-          <p><strong>Contexte :</strong> Création d'une Intelligence Artificielle capable d'apprendre à survivre seule dans un environnement sans aucune règle pré-codée</p>
-          <p><strong>Ce que j’ai fait :</strong> 
-             Développement d'un moteur d'apprentissage par renforcement "from scratch" :
-             <br>• <strong>Réseau de Neurones :</strong> Codage manuel des perceptrons, couches cachées et fonctions d'activation (tanh).
-             <br>• <strong>Sélection Naturelle :</strong> Implémentation d'un algorithme génétique (mutation, croisement) pour faire évoluer les générations.
-          </p>
-          <p><strong>Bilan :</strong> Une démonstration visuelle du Deep Learning : passage de créatures aléatoires à des survivants en 300 générations.</p>
-        </div>
-      </section>
-
-    </section>
-
-    <section id="diplomes">
-      <h2>Parcours & Formations</h2>
-      
-      <div class="formation-container">
-        
-        <div class="formation-item">
-          <span class="formation-date">2024 - Aujourd'hui</span>
-          <h3>BUT Informatique</h3>
-          <p class="formation-lieu">IUT de Montpellier - Sète, site de Sète</p>
-          <p><strong>Contexte :</strong> Formation professionnalisante orientée développement full-stack et architecture logicielle.</p>
-          <p><strong>Compétences clés :</strong></p>
-          <ul class="formation-list">
-             <li>Programmation avancée (Java, C) & Web (PHP, Base de Données)</li>
-             <li>Architecture MVC & Bases de données SQL</li>
-             <li>Méthodologie Agile (Scrum) & Gestion de projet</li>
-          </ul>
-        </div>
-
-        <div class="formation-item">
-          <span class="formation-date">2024</span>
-          <h3>Baccalauréat Général</h3>
-          <p class="formation-lieu">Lycée St. Joseph, Sète</p>
-          <p>Spécialités : Mathématiques et Physique Chimie.</p>
-          <p>Mention : Bien.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="competences">
-      <h2>Compétences Techniques</h2>
-
-      <h3 style="margin-top: 30px; color: #fff;">Développement & Backend</h3>
-      <div class="competences-grid">
-        
-        <div class="tech-card">
-          <i class="devicon-java-plain"></i>
-          <span>Java</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-php-plain"></i>
-          <span>PHP</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-mysql-plain"></i>
-          <span>SQL</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-c-plain"></i>
-          <span>Langage C</span>
-        </div>
-
-      </div>
-
-      <h3 style="margin-top: 30px; color: #fff;">Web & Environnement</h3>
-      <div class="competences-grid">
-        
-        <div class="tech-card">
-          <i class="devicon-html5-plain"></i>
-          <span>HTML</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-css3-plain"></i>
-          <span>CSS</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-git-plain"></i>
-          <span>Git</span>
-        </div>
-
-        <div class="tech-card">
-          <i class="devicon-linux-plain"></i>
-          <span>Linux / WSL</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Me Contacter</h2>
-      
-      <div class="contact-container">
-        
-        <div class="contact-info">
-          <h3>Discutons de vos projets</h3>
-          <p>Actuellement à la recherche d'une alternance ou d'opportunités de développement. N'hésitez pas à me contacter via le formulaire ou directement sur mes réseaux.</p>
-          
-          <div class="contact-links">
-            <a href="mailto:nicolas.zago@etu.umontpellier.fr" class="contact-card">
-              <div class="icon-box"><i class="devicon-google-plain"></i></div> <span>nicolas.zago@etu.umontpellier.fr</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/nicolas-zago-6bb948389/" target="_blank" class="contact-card">
-              <div class="icon-box"><i class="devicon-linkedin-plain"></i></div>
-              <span>Mon Profil LinkedIn</span>
-            </a>
-
-            <a href="https://gitlabinfo.iutmontp.univ-montp2.fr/zagon" target="_blank" class="contact-card">
-              <div class="icon-box"><i class="devicon-github-original"></i></div>
-              <span>Mon GitLab</span>
-            </a>
+              <div class="v-card">
+                <div class="v-card-icon">🕸️</div>
+                <h4>Storytelling Transmédia</h4>
+                <p>L'expérience commence avant même d'entrer dans la salle.</p>
+                <div class="v-card-border"></div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <form class="contact-form" action="https://formsubmit.co/nicolaszago08@gmail.com" method="POST">
-  
-          <input type="hidden" name="_captcha" value="false">
-          
-          <input type="hidden" name="_next" value="https://colasbit.github.io/portefolio/#contact">
-          
-          <input type="hidden" name="_subject" value="Nouveau contact depuis le Portfolio !">
-
-          <div class="form-group">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Bonjour..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Envoyer le message</button>
-        </form>
-
-      </div>
     </section>
+
+
 
   </main>
 
@@ -380,4 +174,5 @@
   </footer>
   <script src="scroll.js"></script>
 </body>
+
 </html>
