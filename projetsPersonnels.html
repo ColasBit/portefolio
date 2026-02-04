@@ -101,15 +101,16 @@
         
         <div class="projet-info">
             <h3>SoundScape Manager</h3>
-            <p><strong>Technos :</strong> Java 21, JavaFX (MVC), Maven</p>
-            <p><strong>Contexte :</strong> Création d'un outil "Desktop" pour Maître de Jeu (JDR) permettant de centraliser l'ambiance sonore, remplaçant l'usage de multiples onglets web.</p>
+            <p><strong>Technos :</strong> Java 21, JavaFX (MVC),HTTP Server, Maven, Jackson (JSON)</p>
+            <p><strong>Contexte :</strong> Développement d'une solution complète pour Maître de Jeu (JDR) transformant un PC en table de mixage audio immersive. Le but : centraliser la gestion sonore et piloter l'ambiance à distance via smartphone.</p>
             <p><strong>Défis techniques relevés :</strong>
-                <br>• <strong>Architecture MVC :</strong> Séparation stricte entre la logique (AudioEngine), les données (Models) et l'interface (FXML).</li>
-                <br>• <strong>Multithreading & UI :</strong> Utilisation de <code>Task</code> et threads pour charger les images/sons sans geler l'interface (Non-blocking UI).</li>
-                <br>• <strong>Logique Audio Avancée :</strong> Algorithme de <em>Crossfade</em> (transition douce) et gestion simultanée de pistes (Ambiance + Musique).</li>
-                <br>• <strong>Packaging & Distribution :</strong> Transformation du code Java en exécutable natif Windows (<code>.exe</code>) autonome via <em>jpackage</em>.</li>
+                <br>• <strong>Architecture MVC :</strong> Séparation stricte entre la logique (AudioEngine), les données (Models) et l'interface (FXML).
+                <br>• <strong>Multithreading & UI :</strong> Utilisation de <code>Task</code> et threads pour charger les images/sons sans geler l'interface (Non-blocking UI).
+                <br>• <strong>Logique Audio Avancée :</strong> Algorithme de <em>Crossfade</em> (transition douce) et gestion simultanée de pistes (Ambiance + Musique).
+                <br>• <strong>IoT & Contrôle à distance :</strong> Création d'un serveur HTTP embarqué (sans framework lourd) exposant une API REST. Permet de contrôler le son et le volume en temps réel depuis une interface Web mobile responsive générée dynamiquement.
+                <br>• <strong>Distribution :</strong> Packaging professionnel via <em>jpackage</em> incluant une JRE allégée pour un exécutable (.exe) ne nécessitant aucune installation préalable de Java.
             </p>
-            <p><strong>Bilan :</strong> Passage d'un code brut à un produit logiciel fini, installable et distribué publiquement.</p>
+            <p><strong>Bilan :</strong> Un projet complet alliant Backend (Serveur), Frontend (JavaFX + Web Mobile) et Architecture logicielle robuste (SOLID).</p>
             
         </div>
         
