@@ -30,6 +30,7 @@
         
         <a href="formation.html">Diplômes & Formations</a>
         <a href="LiensExternes/CV Nicolas ZAGO.pdf">CV</a>
+        <a href="presentation.html">Un peu plus sur moi</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -41,16 +42,18 @@
 
       <section class="projet projet-labo">
         <div class="projet-img-container">
-            
             <img src="images/Windows95.png" alt="Projet VM Windows">
         </div>
         
         <div class="projet-info">
           <h3>Afficher une caméra Windows 11 sur une VM Windows 95</h3>
-          <p><strong >Technos :</strong> C, DosBox, WSL</p>
-          <p><strong>Contexte :</strong> Réalisation d'une VM DOSBox contenant Windows 95 étant relié à Windows 11 pour transmettre un flux vidéo</p>
+          <div class="competences-tag">
+              <span class="tag-c3">Administrer</span>
+          </div>
+          <p><strong>Technos :</strong> C, DosBox, WSL, Socket</p>
+          <p><strong>Contexte :</strong> Dans ce projet, l'enjeu était d'Administrer un système complexe en faisant communiquer deux environnements hétérogènes. J'ai dû configurer les couches réseaux (ponts) et gérer les contraintes matérielles de l'OS.</p>
           <p><strong>Ce que j’ai fait :</strong> Le But était de faire comprendre à un dinosaure comment afficher une vidéo dans un langage compréhensible. J'ai donc codé un Serveur en C qui envoie des données retravaillées à un client sur un pont Réseau via Socket TCP.</p>
-          <p><strong>Bilan :</strong> Cela m'a fait comprendre les limites des OS, les outils et comment les systemes communiquent et évoluent</p>
+          <p><strong>Bilan :</strong> Cela m'a fait comprendre les limites des OS, les outils et comment les systemes communiquent et évoluent.</p>
         </div>
       </section>
 
@@ -61,34 +64,38 @@
         
         <div class="projet-info">
           <h3>Simulation d'OS & Environnement de Bureau</h3>
+          <div class="competences-tag">
+              <span class="tag-c1">Réaliser</span>
+          </div>
           <p><strong>Technos :</strong> Python (POO), Bibliothèques graphiques natives</p>
-          <p><strong>Contexte :</strong> Défi technique personnel : recréer l'expérience utilisateur de Windows 95/98 entièrement en code moderne</p>
+          <p><strong>Contexte :</strong> Défi technique personnel : recréer l'expérience utilisateur de Windows 95/98 entièrement en code moderne.</p>
           <p><strong>Ce que j’ai fait :</strong> 
-             Architecture complète d'un "Système d'Exploitation" simulé :
-             <br>• <strong>Système de Fichiers :</strong> Développement d'une couche d'abstraction pour naviguer sur la machine hôte via l'interface rétro.
-             <br>• <strong>Applications Natives :</strong> Recodage complet d'outils fonctionnels (Bloc-notes, Explorateur de fichiers, Terminal,...).
+              Architecture complète d'un "Système d'Exploitation" simulé :
+              <br>• <strong>Système de Fichiers :</strong> Développement d'une couche d'abstraction pour naviguer sur la machine hôte via l'interface rétro.
+              <br>• <strong>Applications Natives :</strong> Recodage complet d'outils fonctionnels (Bloc-notes, Explorateur de fichiers, Terminal,...).
           </p>
           <p><strong>Bilan :</strong> Une plongée profonde dans la programmation événementielle et la structure des systèmes graphiques.</p>
         </div>
       </section>
 
-        
-          
       <section class="projet projet-labo">
         <div class="projet-img-container">
-          <video autoplay muted loop  class="responsive-video">
+          <video autoplay muted loop class="responsive-video">
               <source src="images/démo-ia-surivie.mp4" type="video/mp4">
               Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
         <div class="projet-info">
           <h3>Réseau de Neurones</h3>
+          <div class="competences-tag">
+              <span class="tag-c2">Optimiser</span>
+          </div>
           <p><strong>Technos :</strong> Java </p>
-          <p><strong>Contexte :</strong> Création d'une Intelligence Artificielle capable d'apprendre à survivre seule dans un environnement sans aucune règle pré-codée</p>
+          <p><strong>Contexte :</strong> Création d'une Intelligence Artificielle capable d'apprendre à survivre seule dans un environnement sans aucune règle pré-codée.</p>
           <p><strong>Ce que j’ai fait :</strong> 
-             Développement d'un moteur d'apprentissage par renforcement "from scratch" :
-             <br>• <strong>Réseau de Neurones :</strong> Codage manuel des perceptrons, couches cachées et fonctions d'activations.
-             <br>• <strong>Sélection Naturelle :</strong> Implémentation d'un algorithme génétique (mutation, croisement) pour faire évoluer les générations.
+              Développement d'un moteur d'apprentissage par renforcement "from scratch" :
+              <br>• <strong>Réseau de Neurones :</strong> Codage manuel des perceptrons, couches cachées et fonctions d'activations.
+              <br>• <strong>Sélection Naturelle :</strong> Implémentation d'un algorithme génétique (mutation, croisement) pour faire évoluer les générations.
           </p>
           <p><strong>Bilan :</strong> Une démonstration visuelle du Deep Learning : passage de créatures aléatoires à des survivants en 300 générations.</p>
         </div>
@@ -101,26 +108,26 @@
         
         <div class="projet-info">
             <h3>SoundScape Manager</h3>
-            <p><strong>Technos :</strong> Java 21, JavaFX (MVC),HTTP Server, Maven, Jackson (JSON)</p>
-            <p><strong>Contexte :</strong> Développement d'une solution complète pour Maître de Jeu (JDR) transformant un PC en table de mixage audio immersive. Le but : centraliser la gestion sonore et piloter l'ambiance à distance via smartphone.</p>
+            <div class="competences-tag">
+                <span class="tag-c4">Gérer</span>
+                <span class="tag-c5">Conduire</span>
+            </div>
+            <p><strong>Technos :</strong> Java 21, JavaFX (MVC), HTTP Server, Maven, Jackson (JSON)</p>
+            <p><strong>Contexte :</strong> Développement d'une solution complète pour Maître de Jeu (JDR) transformant un PC en table de mixage audio immersive.</p>
             <p><strong>Défis techniques relevés :</strong>
-                <br>• <strong>Architecture MVC :</strong> Séparation stricte entre la logique (AudioEngine), les données (Models) et l'interface (FXML).
-                <br>• <strong>Multithreading & UI :</strong> Utilisation de <code>Task</code> et threads pour charger les images/sons sans geler l'interface (Non-blocking UI).
-                <br>• <strong>Logique Audio Avancée :</strong> Algorithme de <em>Crossfade</em> (transition douce) et gestion simultanée de pistes (Ambiance + Musique).
-                <br>• <strong>IoT & Contrôle à distance :</strong> Création d'un serveur HTTP embarqué (sans framework lourd) exposant une API REST. Permet de contrôler le son et le volume en temps réel depuis une interface Web mobile responsive générée dynamiquement.
-                <br>• <strong>Distribution :</strong> Packaging professionnel via <em>jpackage</em> incluant une JRE allégée pour un exécutable (.exe) ne nécessitant aucune installation préalable de Java.
+                <br>• <strong>Architecture MVC :</strong> Séparation stricte entre la logique, les données et l'interface.
+                <br>• <strong>Multithreading & UI :</strong> Utilisation de threads pour un chargement fluide (Non-blocking UI).
+                <br>• <strong>Conduire :</strong> Analyse des besoins d'un utilisateur final pour concevoir une interface pilotable à distance.
+                <br>• <strong>IoT & Contrôle à distance :</strong> Création d'un serveur HTTP embarqué exposant une API REST.
+                <br>• <strong>Distribution :</strong> Packaging professionnel .exe incluant une JRE allégée.
             </p>
-            <p><strong>Bilan :</strong> Un projet complet alliant Backend (Serveur), Frontend (JavaFX + Web Mobile) et Architecture logicielle robuste (SOLID).</p>
-            
+            <p><strong>Bilan :</strong> Un projet complet alliant Backend, Frontend et Architecture logicielle robuste (SOLID).</p>
         </div>
-        
     </section>
 
     <iframe frameborder="0" src="https://itch.io/embed/4249910?border_width=2&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=ffcf12&amp;border_color=363636" width="554" height="169"><a href="https://nicolas-zago.itch.io/soundscape-manager">SoundScape Manager by Nicolas ZAGO</a></iframe>
 
     </section>
-
-
   </main>
 
   <footer>
