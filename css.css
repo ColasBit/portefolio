@@ -455,6 +455,33 @@ nav a:hover {
 }
 
 .contact-container { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+.contact-info {flex: 1; min-width: 300px;}
+.contact-links {display: flex;flex-direction: column;gap: 15px;}
+.contact-info p {color: #ccc;line-height: 1.6;margin-bottom: 30px;}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #383838;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  border-left: 3px solid transparent;
+}
+
+.icon-box {
+  font-size: 1.5rem;
+  color: #f2c94c;
+}
+
+.contact-card:hover {
+  background: #444;
+  transform: translateX(10px); 
+  border-left-color: #f2c94c;
+}
+
 .contact-form {
   flex: 1.5; min-width: 300px; background: #252525; padding: 30px;
   border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
