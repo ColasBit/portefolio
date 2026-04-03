@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css">
+    <title>Portfolio - Étude IA</title>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400&display=swap"
+        rel="stylesheet">
+    <style>
+        .rapport-container {
+            background: var(--bg-card, rgba(30, 30, 30, 0.6));
+            border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .graph-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+        }
+        .graph-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #444;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .analyse-text {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .analyse-text strong {
+            color: #f2c94c;
+        }
+        .tech-params {
+            background: #111;
+            border-left: 3px solid #f2c94c;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #bbb;
+            margin: 15px 0;
+        }
+        .tech-params strong {
+            color: #fff;
+        }
+        .general-env {
+            background: rgba(242, 201, 76, 0.05);
+            border: 1px solid rgba(242, 201, 76, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .env-item {
+            flex: 1;
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h2>Nicolas ZAGO</h2>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <div class="dropdown-container">
+                <a id="Projets" href="#">Projets ▼</a>
+                <div class="sousmenu">
+                    <div class="scroll-page"><a class="partition" href="projetsUniversitaires.html">Projets
+                            Universitaires</a></div>
+                    <div class="scroll-page"><a class="partition" href="projetsPersonnels.html">Projets Personnels</a>
+                    </div>
+                </div>
+            </div>
+            <a href="formation.html">Diplômes & Formations</a>
+            <a href="LiensExternes/CV Nicolas ZAGO.pdf">CV</a>
+            <a href="presentation.html">Un peu plus sur moi</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <a href="projetsPersonnels.html" style="color: #f2c94c; text-decoration: none; font-weight: bold;">← Retour aux projets</a>
+            <h2 style="margin-top: 20px;">Étude Empirique : Réseau de Neurones</h2>
+
+            <div class="rapport-container">
+                <h3>Méthodologie & Environnement</h3>
+                <p class="analyse-text">
+                    Pour valider le comportement de mon moteur d'apprentissage par renforcement, j'ai isolé
+                    l'environnement de simulation et procédé à l'enregistrement des données sur plusieurs séries de
+                    <strong>300 générations minimum</strong>. L'objectif (<span class="tag-c2"
+                        style="font-size:0.8em; padding:2px 6px; background-color: #27ae60; color: white; border-radius: 4px;">Optimiser</span>) était d'observer l'impact de
+                    l'algorithme génétique sur la capacité de survie des entités.
+                </p>
+
+                <div class="general-env">
+                    <div class="env-item">
+                        <strong style="color: #f2c94c;">Taille du champ :</strong><br>
+                        <span style="color: #ccc;">1500px x 900px</span>
+                    </div>
+                    <div class="env-item">
+                        <strong style="color: #f2c94c;">Population :</strong><br>
+                        <span style="color: #ccc;">100 individus</span>
+                    </div>
+                    <div class="env-item">
+                        <strong style="color: #f2c94c;">Ressources :</strong><br>
+                        <span style="color: #ccc;">20 pommes</span>
+                    </div>
+                    <div class="env-item">
+                        <strong style="color: #f2c94c;">Menaces :</strong><br>
+                        <span style="color: #ccc;">15 monstres</span>
+                    </div>
+                </div>
+
+                <div class="graph-section">
+                    <h3>1. Évolution du Score et Domination Comportementale</h3>
+                    <p class="analyse-text">
+                        Lors de ces simulations, chaque "champion" est défini par un trait dominant :
+                        <strong>Colérique</strong> (agressif/actif), <strong>Passif</strong> ou
+                        <strong>Peureux</strong> (fuit même les Pommes). L'apprentissage modifie les poids du réseau neuronal pour optimiser la survie et la récolte de pommes.
+                    </p>
+
+                    <div class="tech-params">
+                        <strong>[SIMULATION 1] Paramètres du Réseau :</strong><br>
+                        • Inputs (Vision) : Position Monstres (X,Y), Position Pommes (X,Y), Biais de décision.<br>
+                        • Outputs : Vitesse (X,Y).<br>
+                        • Règles de l'environnement : Seuls les monstres peuvent tuer un individu.
+                    </div>
+                    <img src="images/simulation 1 graph - Copie.png" alt="Graphique Simulation 1" class="graph-img">
+
+                    <div class="tech-params" style="border-left-color: #e74c3c;">
+                        <strong>[SIMULATION 2] Ajout d'une contrainte :</strong><br>
+                        • Inputs (Vision) : Identique (Monstres, Pommes, Biais).<br>
+                        • Outputs : Vitesse (X,Y).<br>
+                        • Règles de l'environnement : Les monstres tuent + <strong>les bords de la cartes deviennent mortels</strong> si un individu y reste collé trop longtemps.
+                    </div>
+                    <img src="images/simulation 2 graph - Copie.png" alt="Graphique Simulation 2" class="graph-img">
+
+                    <p class="analyse-text">
+                        <strong>Observations :</strong> Les données montrent une nette suprématie évolutive du profil
+                        <strong>Colérique (en rouge)</strong>. Passé le cap de la génération 150, ce comportement
+                        monopolise les pics de performance. L'ajout de la mort par collision prolongée avec les murs (Sim 2) force l'IA à rester en mouvement, pénalisant grandement les profils Passifs et Peureux qui finissent par être supplantés dans le pool génétique.
+                    </p>
+                </div>
+
+                <div class="graph-section">
+                    <h3>2. Temps de survie et Apprentissage Spatial</h3>
+
+                    <div class="tech-params" style="border-left-color: #2980b9;">
+                        <strong>[SIMULATION 3] Évolution de la perception :</strong><br>
+                        • Inputs (Vision) : Monstre (X,Y), Pommes (X,Y), <strong>Mur (X), Mur (Y)</strong>, Biais de décision.<br>
+                        • Outputs : Vitesse (X,Y).<br>
+                        • Règles de l'environnement : Monstres mortels + Murs mortels (si contact prolongé).
+                    </div>
+                    <img src="images/Simulation 3 - Copie.png" alt="Graphique Temps de Survie" class="graph-img">
+
+                    <p class="analyse-text">
+                        <strong>Observations :</strong> En donnant au réseau de neurones la capacité de "voir" les murs (Inputs Mur X, Mur Y), on observe l'évolution du temps de survie (en frames). La <strong>forte volatilité</strong> illustre les "fails" d'adaptation liés aux mutations génétiques aléatoires. Cependant, la ligne de tendance globale est ascendante : l'IA apprend à esquiver à la fois les monstres et les bordures.
+                    </p>
+                    <p class="analyse-text"
+                        style="margin-top: 20px; border-left: 4px solid #f2c94c; padding-left: 15px;">
+                        <strong>Bilan de l'étude :</strong> L'ajout progressif de contraintes (bords de la carte éliminatioire) et de capteurs (vision spatiale des murs) prouve que le modèle s'adapte à la complexité de son environnement. C'est une illustration parfaite de l'évolution darwinienne appliquée au code : des impasses évolutives fréquentes, mais une optimisation structurelle sur le long terme.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2025 - Portfolio créé par Nicolas Zago</p>
+    </footer>
+    <script src="scroll.js"></script>
+</body>
+
+</html>
